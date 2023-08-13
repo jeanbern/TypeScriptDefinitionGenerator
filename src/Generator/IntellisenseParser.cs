@@ -190,7 +190,8 @@ namespace TypeScriptDefinitionGenerator
                    {
                        Name = GetName(p),
                        Type = GetType(p.Parent, p.Type, traversedTypes, references),
-                       Summary = GetSummary(p)
+                       Summary = GetSummary(p),
+                       ReadOnly = p.Setter == null
                    };
         }
 
